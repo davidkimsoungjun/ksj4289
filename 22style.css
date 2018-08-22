@@ -1,0 +1,37 @@
+@charset "utf-8";
+body{background:url(../../images!/w01.jpg) no-repeat;}
+.topnav{background: #333;}
+.topnav:after{content:"";display: block;clear: both;}
+.topnav a{
+	display: block;
+	float: left;
+	padding:14px 16px;
+	color:#f2f2f2;
+	font-size:17px;
+}
+.topnav a:hover{background: #ddd;color:#000;}
+.active{background: #4caf50;color:white;}
+.topnav a.icon,.topnav a.icon1{display: none;}
+
+.topnav a.icon{float: right;}
+.content{padding: 100px;font-size:34px;text-align:center;}
+
+ 
+@media screen and (max-width:600px){
+	/*.topnav a.icon{float: right;display: block;}*/
+	/*600px 되면 아이콘이 오른쪽으로 붙는다.*/
+	/*.topnav a:not(:first-child){display:none;}
+
+	.topnav{position: relative;}
+	.topnav a{float:none;}
+	.topnav a.icon{position: absolute;right: 0;top: 0;display: block;}*/
+
+.topnav a:not(:first-child){display: none;}
+.topnav{position: relative;}
+.topnav a.icon{display: block;position: absolute;top: 0;right: 0;}
+.topnav a{float:none;}
+.topnav a.icon1{display: none;position:absolute;top:0;right: 0;}
+
+
+}
+

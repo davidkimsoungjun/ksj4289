@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>top menu</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+	<link rel="stylesheet" href="./css/22reset.css">
+	<link rel="stylesheet" href="./css/22style.css">
+</head>
+<body>
+	<div class="topnav">
+		<a href="#" class="active"><i class="fas fa-home"></i>HOME</a>
+		<a href="#"><i class="fas fa-newspaper"></i>News</a>
+		<a href="#"><i class="fas fa-file-contract"></i>Contact</a>
+		<a href="#"><i class="fas fa-ban"></i>About</a>
+		<a href="javascript:void(0)" class="icon" onClick="menuOpen();">
+			<i class="fas fa-wifi"></i>
+			<i class="fas fa-battery-three-quarters"></i>
+			<i class="fas fa-bars"></i>
+	    </a>
+	    <a href="javascript:void(0)" class="icon1" onClick="menuClose();">
+			<i class="fas fa-minus-square"></i>
+		</a>
+	</div>
+
+
+	<div class="content">
+		<h2>Lorem ipsum dolor.</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem, natus.</p>
+	</div>
+	<script>
+		function menuOpen(){
+			 var x = document.getElementsByTagName('a');
+
+
+			    for(var i=1;i<4;i++){
+
+				    x.item(i).style.display="block";
+				  }
+				 x.item(4).style.display="none";		
+				 x.item(5).style.display="block";		
+			}
+
+
+		function menuClose(){
+ 			 var x = document.getElementsByTagName('a');
+
+
+			    for(var i=1;i<4;i++){
+
+				x.item(i).style.display= "none";
+                }
+				x.item(4).style.display= "block";	
+				x.item(5).style.display= "none";
+		}
+
+			
+
+		 var w;
+		 window.onresize = function(){
+		 	w = document.body.clientWidth;
+		 var x = document.getElementsByTagName('a');
+		 if(w > 600){
+
+		 	x.item(1).style.display = "block";
+		 	x.item(2).style.display = "block";
+		 	x.item(3).style.display = "block";
+		 	x.item(4).style.display = "none";
+		 	x.item(5).style.display = "none";
+		 }else{
+		 	x.item(1).style.display = "none";
+		 	x.item(2).style.display = "none";
+		 	x.item(3).style.display = "none";
+		 	x.item(4).style.display = "block";
+		 	x.item(5).style.display = "none";
+		 }
+		 console.log(w);
+		}
+		
+	</script>
+</body>
+</html>
